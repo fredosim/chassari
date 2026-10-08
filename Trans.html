@@ -1,0 +1,935 @@
+Here is your transcript formatted as a clean, readable HTML document for your website. It removes all timestamps and turns the spoken text into well-organized sections with headings, paragraphs, and a table of contents.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Sell Anything to Anyone — Cliff Eno | SCORE Workshop</title>
+<meta name="description" content="A SCORE workshop transcript: Cliff Eno teaches how to sell anything to anyone using the two real reasons people buy — fears and passions — and a simple three-step method.">
+<style>
+  :root {
+    --ink: #1f2933;
+    --muted: #5c6b7a;
+    --accent: #0b5fa5;
+    --accent-soft: #eaf3fb;
+    --rule: #d9e2ec;
+    --bg: #fbfcfd;
+    --card: #ffffff;
+    --maxw: 46rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+
+  /* ---------- Header ---------- */
+  header.masthead {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-top: 5px solid var(--accent);
+    border-radius: 6px;
+    padding: 2rem 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  header.masthead .kicker {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+  }
+
+  header.masthead h1 {
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+    color: #102a43;
+  }
+
+  header.masthead .subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin: 0 0 1.25rem;
+    font-style: italic;
+  }
+
+  header.masthead .meta {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ---------- Table of contents ---------- */
+  nav.toc {
+    background: var(--accent-soft);
+    border: 1px solid #cfe2f3;
+    border-radius: 6px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  nav.toc h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.9rem;
+  }
+
+  nav.toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.925rem;
+    line-height: 1.9;
+  }
+
+  nav.toc a {
+    color: #14456f;
+    text-decoration: none;
+  }
+
+  nav.toc a:hover,
+  nav.toc a:focus {
+    text-decoration: underline;
+  }
+
+  /* ---------- Sections ---------- */
+  section { margin-bottom: 3rem; }
+
+  h2.section-title {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: #102a43;
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--rule);
+  }
+
+  h3 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin: 2rem 0 0.75rem;
+  }
+
+  h4 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #243b53;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  p { margin: 0 0 1.15rem; }
+
+  .speaker {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+
+  /* ---------- Callouts ---------- */
+  .callout {
+    background: var(--card);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0;
+    box-shadow: 0 1px 2px rgba(16, 42, 67, 0.06);
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout .label {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.big {
+    text-align: center;
+    border-left: none;
+    border-top: 3px solid var(--accent);
+    border-bottom: 3px solid var(--accent);
+    border-radius: 0;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .callout.big .big-text {
+    font-size: 1.3rem;
+    line-height: 1.45;
+    font-weight: 700;
+    color: #102a43;
+    margin: 0;
+  }
+
+  /* ---------- Steps ---------- */
+  ol.steps {
+    list-style: none;
+    counter-reset: step;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+
+  ol.steps > li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 3.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  ol.steps > li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ol.steps > li > .step-title {
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #102a43;
+    margin-bottom: 0.35rem;
+  }
+
+  /* ---------- Lists ---------- */
+  ul.plain {
+    margin: 0 0 1.25rem;
+    padding-left: 1.35rem;
+  }
+
+  ul.plain li { margin-bottom: 0.4rem; }
+
+  ul.sins {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 0.6rem;
+  }
+
+  ul.sins li {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 0.6rem 0.85rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  ul.sins li strong {
+    display: block;
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Q&A ---------- */
+  .qa {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .qa .question {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #102a43;
+    margin: 0 0 0.6rem;
+  }
+
+  .qa .question::before {
+    content: "Q: ";
+    color: var(--accent);
+  }
+
+  .qa .answer {
+    margin: 0 0 1.75rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--rule);
+  }
+
+  .qa .answer::before {
+    content: "A: ";
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* ---------- Footer ---------- */
+  footer.colophon {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 34rem) {
+    body { font-size: 1rem; }
+    .wrap { padding: 1.5rem 1rem 3.5rem; }
+    header.masthead { padding: 1.5rem 1.25rem; }
+    nav.toc { padding: 1.25rem; }
+    ol.steps > li { padding-left: 2.85rem; }
+    ol.steps > li::before { width: 2rem; height: 2rem; font-size: 0.9rem; }
+  }
+
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    nav.toc { display: none; }
+    header.masthead { border: none; border-top: 3px solid #000; }
+    .callout { box-shadow: none; }
+    section { page-break-inside: auto; }
+    h2.section-title { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">SCORE Workshop Transcript</p>
+    <h1>How to Sell Anything to Anyone</h1>
+    <p class="subtitle">Why people really buy — and the three-step method that works when cold calling never will.</p>
+    <p class="meta">
+      <strong>Presenter:</strong> Cliff Eno, small-business attorney and entrepreneur<br>
+      <strong>Introduction:</strong> Dina Maon, Certified Mentor and Counselor, SCORE<br>
+      <strong>Hosted by:</strong> SCORE — Greater Bridgeport area
+    </p>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#intro">Introduction by Dina Maon</a></li>
+      <li><a href="#opening">Opening Remarks: Why a Lawyer Is Teaching Sales</a></li>
+      <li><a href="#cold-calling">Cold Calling Is Not Selling</a></li>
+      <li><a href="#two-reasons">The Two Real Reasons People Buy</a></li>
+      <li><a href="#passions">Passion: The Seven Deadly Sins as a Marketing Shortcut</a></li>
+      <li><a href="#fears">Fear and Anxiety: The Second Great Motivator</a></li>
+      <li><a href="#segmentation">Case Study: Selling Cosmetics by Segmentation</a></li>
+      <li><a href="#three-steps">The Three-Step Method</a></li>
+      <li><a href="#know-market">You Must Know the People You Sell To</a></li>
+      <li><a href="#llc-pitch">A Real Sales Pitch, Parsed</a></li>
+      <li><a href="#resume">Don't Become a Prisoner of Your Resume</a></li>
+      <li><a href="#ebay-story">The Frugal Framis That Changed My Career</a></li>
+      <li><a href="#qa">Questions and Answers</a></li>
+      <li><a href="#future">Four Words About the Future</a></li>
+    </ol>
+  </nav>
+
+  <!-- ================= INTRODUCTION ================= -->
+  <section id="intro">
+    <h2 class="section-title">Introduction by Dina Maon</h2>
+
+    <p>Good evening, everyone. Thank you so much for joining us. My name is Dina Maon, and I am a certified mentor and counselor with SCORE. I also have the job title of being the workshop woman. I am responsible for making sure that these actually go off without a hitch and scheduling them, and we are very pleased this evening to have Cliff Eno present “How to Sell Anything to Anyone.”</p>
+
+    <p>How many of you have either worked with or know about SCORE and what it is? Oh, good — so a good number of you do. For those of you that don’t, we are a free-of-charge service where we do two things: we have these workshops, but more importantly, what we do is help small businesses. We help brand-new, fledgling businesses, people with great ideas that are looking to just get into having a business.</p>
+
+    <p>SCORE and our mentors and all of the subject-matter experts are all volunteers. We have over 50 mentors in the Greater Bridgeport area. We will work with you and bring the right people in given the challenges that you’re facing — whether it’s “What is a business plan?” “How do I work with the bank?” “How do I work with the bank in terms of guaranteed SBA loans?” “I make great dog biscuits, but I wouldn’t have a clue how to market them. Do you have a marketing expert?” “I don’t understand anything about sales.” We have some very interesting people here that help us with sales and sales efforts and sales processes.</p>
+
+    <p>As I indicated when you all walked in — and I’m going to say it again — if you haven’t checked off your name or signed in, please do so before you leave. There are 641 forms, which are really for the SBA to track us, as opposed to anything else. If you are interested in becoming counseled or being part of our mentor program, we can schedule you. You can take my business card, which is over there. We will contact you and schedule a time for you to come in.</p>
+
+    <p>We have sessions that we offer almost Monday through Thursday, most days of the week, here at the GBCC, at the Fairfield Library, at Housatonic Community College, and at University of Bridgeport as well. Gene Ryan is one of our mentors and he’s here with me this evening. You can wait, Gene — if you ever have accounting issues, let me tell you, brilliant. So, Gene, for you — one plug, right, team.</p>
+
+    <p>So, without much ado, without any further ado, if you have any questions about SCORE, don’t hesitate to catch up with me at the end of this session. At this point, I think I will turn it over to Cliff.</p>
+
+    <p>Oh, one other thing: I will request no one is allowed to leave without having filled out and handed back to me an evaluation form. And with that, Cliff Eno, thank you very much for joining us.</p>
+  </section>
+
+  <!-- ================= OPENING ================= -->
+  <section id="opening">
+    <h2 class="section-title">Opening Remarks: Why a Lawyer Is Teaching Sales</h2>
+
+    <p class="speaker">Cliff Eno</p>
+
+    <p>Okay, guys, first of all, I want you to do something for me: I want you to give yourselves a hand. Don’t do it for me, because I haven’t done anything yet, but give yourselves a hand. All right, there you go. Why am I making you do this? Because I don’t know how much they told you about me. Okay. I have a number of claims to fame, but the one that really is the one we really got to get out of the way here: all of you guys have decided to take time out on a — let’s face it — yucky kind of Tuesday, foggy Tuesday evening. You’re giving a part of your Martin Luther King Day holiday to spend the next hour with a lawyer. They didn’t tell you about that, did they? Who’s going to teach you how to sell? A lawyer teaching you how to sell. Does it get any better than that?</p>
+
+    <p>Because let’s be very honest: when we think of professions that are very marketing-sensitive, that are marketing-forward, that really get their PR act together and all that, you don’t think of the legal profession, do you? That’s not really on the list, is it? Let’s face it, we are kind of behind the times in my profession. Let’s be very honest about that. I mean, we’re still trying to get over the demise of the 8½-by-14 legal pad. Yeah, remember the long legal pads? When those went to 8½-by-11, we cried. We couldn’t figure out what to do. It was a disaster. We attended seminars on how to deal with the changes, you know, in technology and stuff like that. Seriously, we are very behind the times.</p>
+
+    <p>Look at this, folks. Retro, right? Who carries one of these anymore? Nobody. Oh, you do? That’s amazing. You — I know you. Seriously, I got this from a guy on eBay. His grandfather died and they found it in his attic. That’s the only way you can get these things anymore. You can get anything on eBay, by the way. We’ll talk about that actually a little bit later on this evening.</p>
+
+    <p>So why am I — why is somebody like me giving a talk like this, other than the fact that I’ve done it a gazillion times? The answer is simple. There’s two reasons for it. When I went off on my own 25 years ago, one of the first things I learned was that I had to learn how to sell myself. I work with a lot of people who are in transition — former corporate executives who are making the transition to a more entrepreneurial life — and this is probably their biggest challenge.</p>
+
+    <p>If I had to pick the biggest difference between working for yourself and working for somebody else, it is this: when you’re working in a corporation or for an employer, you can have a very exciting career indeed and not have to know a thing at all about where sales come from. Most of you who’ve worked at big companies in the past know yourself: you didn’t have to worry about sales. Probably the revenue fairies took care of all that. They gave you the sales figures, and you were the ones who had to sort of manipulate the cost so that the company would be as profitable as possible.</p>
+
+    <p>When you live in my world, when you’re working for yourself — whether you’re an entrepreneur, a small business owner, a self-employed professional, whatever you call yourself — selling is job one. This is a luxury you cannot afford. You have to learn how to sell. Selling is the difference, very often, between a successful small business and a failure.</p>
+
+    <p>If you were to ask me to give you a list of 10 of the most successful people I’ve ever worked with in my 32 years of working with entrepreneurs, I will tell you something about every one of them: they are all amazing salespeople.</p>
+
+    <p>This is a skill you have to learn, and this is frightening. This scares a lot of people. Why? Because let’s face it: when we think of sales and selling, we think of salespeople. And when we think of salespeople, let’s be real honest about this — what do we think? Who do we think of? Sleazy, right? Used car salesman, telemarketer, the people that call you when you’re sitting down to dinner and try to sell you credit cards and all this kind of stuff. Seriously, I hate these people as much as you do, and there’s reason why you should hate those people, by the way, because what they’re doing is not selling. I’ll explain that in a minute.</p>
+
+    <p>But we don’t want — let’s face it — we don’t want to become one of those people. We do not want to become one of those. We don’t want to become Joe Isuzu. Remember Joe Isuzu from the ’80s auto ads? Those of you here old enough — you don’t remember, sir; you’re too young, I’m sorry. But this is a very smarmy used car — you don’t want to be that kind of person. Nobody wants to be that kind of person. That is not what you need to be. The good news is you don’t have to be that kind of person to become an effective salesperson. Anybody can actually learn to be an effective salesperson.</p>
+
+    <p>What I’m going to be doing with the next hour is I’m going to teach you a method, a very successful method, by which just about anybody can sell just about anything to just about anybody. Now, does that sound like snake oil or what? Coming from a salesperson? From a lawyer? Especially, right? That sounds like snake oil, right? But give me an hour. I’ve been told that this program has changed people’s lives, and I think it can change yours as well.</p>
+
+    <p>One little word of administration before we begin: this program is being recorded for the SCORE website, so anything that makes noises like that young lady’s cell phone just did, please turn it off for the next hour. Otherwise I will be sure to highlight you in the conversation. We’ll have a nice little one-on-one conversation which will then go viral on YouTube. So seriously, please turn that off. It will be very great. It’s a little distracting to me, but also it’ll make the tape come out as best as we possibly can.</p>
+
+    <p>Also, some of you can see, if you’re looking up very close to me, I’m wearing a whole lot of wires here, because I got two separate video cams going here at the same time. So if you really hear something that you disagree with, it’s okay to challenge me. I don’t mind that. But please do not throw water, whatever you do, otherwise I will do a Wicked Witch of the West here. That is not something you absolutely want to see. The older people know what I’m talking about. The people like, “Which — what’s this guy talking about?” I got to be careful about this kind of stuff.</p>
+  </section>
+
+  <!-- ================= COLD CALLING ================= -->
+  <section id="cold-calling">
+    <h2 class="section-title">Cold Calling Is Not Selling</h2>
+
+    <p>So anyway, selling is important. But why do you hate those salespeople? Why do you hate used car salespeople? Why do you hate telemarketers? Okay, because what those people are doing — let me tell you something right off the bat — what those people are doing, and you should not like these people, they are not selling. What those people are doing is cold calling. And there’s a big difference. Cold calling doesn’t work. Do not do it.</p>
+
+    <p>The one book that I will never write, no matter how much somebody pays me, is “How to Become a More Effective Cold Caller,” because I just don’t see it working. It doesn’t work for my clients. It doesn’t work for me. It doesn’t work for anybody.</p>
+
+    <p>Here’s what cold calling is: you know, I got a basement full of dead fish that are rotting away by the minute, and I’m hoping that some of you people here are in the mood for seafood for dinner tonight. That’s what cold calling is. It’s taking your inventory and throwing it at a bunch of people you don’t even know anything about and hoping that there are some people in the audience who really might want some cheap fish for dinner tonight. That’s what cold calling is all about. That’s why you hate these people.</p>
+
+    <p>Okay. I’ll be more specific about this later on in the evening. I am not going to teach you how to cold call. What I’m going to teach you is selling that really, really works.</p>
+  </section>
+
+  <!-- ================= TWO REASONS ================= -->
+  <section id="two-reasons">
+    <h2 class="section-title">The Two Real Reasons People Buy</h2>
+
+    <p>So how do you sell anything to anybody? Answer: it’s a three-step process. But there’s a big but. If I were to give you the three steps right now and list them for you, you wouldn’t have any idea what I was talking about at all. It would sound like Greek to you.</p>
+
+    <p>Before you can understand how to sell just about anything to just about anybody, there’s something you have to buy into, and it’s something that’s a little radical. It’s a little different. It is something I guarantee you’ve never heard from anybody else before — unless you have heard one of my talks before, because I’ve been teaching this now for over 20 years. But unless you’ve attended a Cliff Eno seminar before, you’ve never heard this before.</p>
+
+    <p>I’m going to take some things you know about business tonight and I’m going to turn them on their ear. I’m going to turn them upside down, 180 degrees around. Because once you buy into this particular thing, selling becomes very, very easy. If you don’t buy into it, selling is going to be a challenge.</p>
+
+    <p>Okay. So without further ado, what am I talking about here? Before I can teach you these three steps to selling, I have to teach you a little something different about why people buy things. Before you can sell anything to anybody, you have to know why is it that anybody buys anything in this world.</p>
+
+    <p>All right, let me share with you a little secret. There are two reasons, and only two, why anybody in this world buys anything. There’s only two reasons why you have ever bought anything in this world. There’s only two reasons why I have ever bought anything in this world. I am no smarter, by the way, than anybody else when it comes to being a consumer. You can use these same techniques that I’m going to teach you tonight. You can use them on me. I have actually given this course to people who have actually sold me things later on. Seriously, you can use these techniques with me. I’m no smarter than anybody else when it comes to being a consumer. We’re all the same. What I’m talking about tonight is human nature: what motivates people to buy things.</p>
+
+    <p>There are two reasons, and only two, why anybody buys anything. But now here’s the radical part. Here’s where I’m going to take a departure from anything you’ve ever heard before — unless you’ve heard it from me. If you come from a business background, if you have business training, or if you’ve worked in a company before, you probably think you know what those two things are. But you would be wrong. In fact, as to one of the two, you would be fatally, irreversibly wrong. And one of the biggest reasons why small businesses fail is because the founders, the owners, don’t get this. They don’t get this. They’re following the textbooks. They’re not following reality.</p>
+
+    <p>I’m not going to embarrass anybody here, but those of you in the audience who have a business background, real quick: what do all the textbooks say the two reasons that people buy anything? The two reasons that motivate people to buy things? Needs and wants. I heard somebody say — I think it was somebody over here — needs and wants. That’s the textbook answer. That’s why people buy anything.</p>
+
+    <p>I’m here to tell you tonight it’s wrong. It’s absolutely wrong, especially the needs part. When you’re in business for yourself, one of the dirtiest little secrets you’re going to learn, and that’s not in any textbook in the world: people seldom, if ever, buy things because they need them. I won’t say never, but seldom, if ever, will people buy things because they need them. And one of the dumbest things you can do when you go into business for yourself is to sell people things they need. It’s one of the dumbest things you can do. Hardly ever works.</p>
+
+    <div class="callout">
+      <span class="label">The Core Insight</span>
+      <p>Needs and wants are not the two reasons people buy. The two real reasons are <strong>passions</strong> and <strong>fears</strong>. Everything else in this method flows from that.</p>
+    </div>
+
+    <h3>Why People Don't Buy What They Need</h3>
+
+    <p>Okay, now that’s a little radical, so let me try to explain it a little bit. There are two reasons why people don’t buy things they need. The first reason is people don’t always know what they need. You know, if you don’t know what you need, I don’t know what I need either all the time, right?</p>
+
+    <p>So if I reach into my briefcase now and I pull out an ugly, ugly machine, something you’ve never seen before — it looks like a silver football, it’s got all kinds of lights and wires hanging out of it, it’s got this blue plastic thing that sticks out into space like an antenna — and I put this thing out in front of me and I say, “Now, ladies and gentlemen, this is my latest invention: the Frugal Framis.” That’s a made-up word, by the way, just so you know. I’ve trademarked it. I own Frugal.com, .net, .org, .us, so don’t even think of using this. Okay. I use this the way some people use “widget.” It’s proprietary. I invented it. You cannot have it. End of story. Full legal disclaimer here. Got to do that.</p>
+
+    <p>Okay, and I got this thing. This is called the Frugal Framis. With one of these things, your business will double its revenue, you’ll cut your costs in half, and it will make you a lot more attractive to the opposite sex — or with the same sex, if that’s the way you go. There’s a switch that you can go one way or the other. This is what this machine does.</p>
+
+    <p>Now you’re saying to yourself, “Okay, these are all wonderful goals. These are all things that I want to accomplish, but forgive me, I’m not getting it. What is this? This is an ugly piece of crap that I’m looking at right now. What is this thing? How does it work? What does it do?” I got to stop what I’m talking about. I got to explain the benefits, the features, all the stuff that the marketing textbooks talk about, until finally, after a certain period of time, which may be a very long period of time, you all buy, pop your heads up and down, and say, “Okay, yeah, I didn’t get it at first, Cliff, but you’re right. I probably do need one of these things in my house.”</p>
+
+    <p>Now, if you think that’s science fiction, what I just described — those of you who are old enough, think back to when the first personal computers came out. When did the first personal computers come out? Do anybody know? The first Apple II — 1976 is when it first came out. The Apple — that was the first, you know, personal computer. There were a couple of like personal computer networks for businesses, but the first ones that were intended for the home was the Apple II, that came out in 1976.</p>
+
+    <p>Okay. Did you all rush out and buy one when it first came out? Why? The answer: because you didn’t need it. You know, if you were alive in 1976, you did not need a personal computer in your home at that time. You had already things in your home that did everything that the only personal computers could do.</p>
+
+    <p>If you had to write a letter to somebody, what did you have in the home that worked perfectly well? Typewriter. Remember the IBM Selectric? Right. I mean, I have one at home and I can find all the parts on eBay. It’s amazing. It’s 40 years old. I will be buried with this piece of — this machine. It’s incredible. The IBM — they were some of them were pretty good, right?</p>
+
+    <p>If you had to do a spreadsheet, you had those wonderful analysis pads. Remember the green analysis pads that the accountants used to use? My dad was a bookkeeper, so he used to bring these home and I would color in the boxes. I was like Mondrian, the Dutch painter, right? I could have made a fortune. I was doing what Mondrian was doing when I was like five years old. It was absolutely amazing. He was a Dutch painter, did a lot of geometric abstracts. You can look him up on Wikipedia.</p>
+
+    <p>Okay, so if you had to do slide presentation, you had slides. Kodak made them. Remember Kodak? They just went belly up, right? Kodak used to make them up in Rochester, New York. Rochester’s like a ghost town now because of Kodak going bankrupt. You’re serious. Ever go up to Rochester, New York? That’s a scary town to walk through. Seriously, there’s like nothing going on up there. I was just up there recently.</p>
+
+    <p>So you had all these things. And also, do you remember too how truly ugly the early computers were? I mean, the Apple II kind of looked like the periscope on E.T.’s spaceship, remember that? And they were also hot, and they were dusty, and they were expensive. The printers, like $5,000, $6,000. Right now you can get them for like a hundred bucks, but back then, I mean, they were like $6,000, $7,000 to get a dot matrix printer that didn’t even look good. And all that kind of stuff.</p>
+
+    <p>Don’t get me wrong. I mean, I’m not saying the PC is a bad idea, but it didn’t catch on right away. In fact, it didn’t catch on until 1984, 1985. Wasn’t that when you bought your first PC? Probably around 1984, ’85, ’86. So for that period of time, for like eight or nine years, almost a decade, these personal computer companies — or they were mostly PC divisions of larger companies like IBM and Hewlett-Packard — were spending hundreds of millions of dollars getting their market to the point where they bob their head up and down finally and said, “You know what? You’re right. I need one of these silly PC things in my family room.” It took them 10 years and hundreds of millions of dollars to get their market to that point.</p>
+
+    <p>Anybody here have $100 million in their checking account? Not seeing any hands. By the way, if any of you said yes, my next question would be: do you have a daughter of marriageable age? That’s my next question. Just to let you know, by the way, Lady Gaga has totally taken your look. I don’t know if anybody’s ever told you that before. I’m just — I’m so sorry. Later on I want you to stand up. I want the camera to get a hold of this. This is absolutely wonderful. You never sit in the front row in a Cliff Eno presentation. I always have to have fun with a couple of people.</p>
+
+    <p>But anyway, seriously, do you know her, by the way? She actually grew up a few blocks away from where I grew up as a kid. It’s kind of interesting.</p>
+
+    <p>Anyway, so okay, let’s get back on track here. The point is that it took like 10 years for the marketplace for the personal computer to develop. So my story here is not so much science fiction. People will not buy things that they’re afraid of. You’re going to have to condition your market, educate your market, and that takes time. That takes money, which you probably do not have. That’s my message here.</p>
+
+    <p>But there’s a second thing. There’s a second reason why people do not buy the things that they need. Even if you know you need something — even if I reach into my briefcase and I pull out something and you say, “Oh, Cliff, don’t even open your mouth. Yes, I get it. You’re absolutely right. I need this. Don’t even open your mouth. I don’t have to spend a minute of my time getting you to buy into the fact that you need this. It’s something you know you need” — do you always buy it? Seldom, if ever.</p>
+
+    <p>Now the best example I can give up — I apologize, but I’m going to have to talk about myself for a couple of minutes, because I’m probably the best example that I can think of. And here I’m going to get a little personal on YouTube and on the internet, but I think I can trust you guys with this information.</p>
+
+    <h3>The Will I Never Got Around to Writing</h3>
+
+    <p>Would it shock you to know that up until about four or five years ago I did not have a will? Pretty — it’s pretty surprising, isn’t it? You won’t offend me if you say that you’re shocked. Now let me ask you: why did I put off getting a will done? By the way, I don’t do wills. I’m not trying to sell you on the idea of doing — how many people here do not have a will? Be honest. It’s about half the room. That is very, very typical.</p>
+
+    <p>Okay. Why did I put off for so many years having a will? Is it because I didn’t know I needed one? Come on, folks. I’m a lawyer. If anybody knows they need a will, it’s me, right? And it gets worse, because I myself do not do wills for people. Every once in a while a client will call me, they want a will done. Right. What do I do? I don’t just hang up on them. When a client calls me and asks me to do a will for them, I can’t do it for them, so what do I do? I refer them. And there are a bunch of estate planning attorneys here in Connecticut that are very, very happy that I refer them business on a regular basis.</p>
+
+    <p>And they all say the same thing. They say, “Hey Cliff, thanks for the referral to Joe So-and-So. Listen, when it comes time for you and your wife to do your will, call me. I’ll do it for you as a professional courtesy. I won’t charge you. This is my way of saying thank you for the business.” This is what we lawyers do for each other, right?</p>
+
+    <p>So think about this for a moment. Here I am, a relatively intelligent human being — or at least I think I am. I know I need something, and I’ve got people offering to do it for me for nothing, and I’m still resisting. I’m still saying no. I’m still fighting it. Is that stupid? Answer: this is your marketplace. The marketplace will break your heart every time this way.</p>
+
+    <p>You can have 50 good, solid, intelligent, correct reasons why people should be buying your products, your services, whatever it is you do, but unless they are otherwise motivated to buy, they will not. Needs and wants are not the two reasons why anybody buys anything, especially the needs part. Whenever you’re selling people something they need, what you’re really saying to people is, “You should be buying so-and-so. Whatever you ought to be buying, whatever it is.” And when you’re doing that, you’re cold calling, which doesn’t work. Needs do not work.</p>
+
+    <div class="callout big">
+      <span class="label">The Real Two Reasons</span>
+      <p class="big-text">People buy for two reasons, and only two:<br>Passion and Fear.</p>
+    </div>
+  </section>
+
+  <!-- ================= PASSIONS ================= -->
+  <section id="passions">
+    <h2 class="section-title">Passion: The Seven Deadly Sins as a Marketing Shortcut</h2>
+
+    <p>So what does? There are two reasons, and only two, why anybody in this world ever buys anything, but they are not needs and wants. Here’s what they really are: passions and fears.</p>
+
+    <p>People buy passion. If you have a product or service that turns people on, that gets them excited in some way about life, they will buy from you. Give me examples. Whole industries that are based on people’s passions: cars. What kind of cars? Corvettes, sports cars. Sorry, somebody driving a Maserati to and from work each day is not motivated by a basic need for transportation. There is something a little different going on with that person, isn’t it? Right. And we’ll talk about a minute about exactly what that is.</p>
+
+    <p>Somebody else: fashion. High fashion. Somebody who really wants to look good at a party and knock them all dead. Yeah, absolutely. What else? Oh, come on, this is easy. Music. Somebody said music. The iPod. Absolutely. Anything with the arts: theater, movies, anything to do with entertainment. Sporting goods. Golf clubs. Unless you have a basement full of rats, you do not need a golf club.</p>
+
+    <p>Some people got that — it was actually kind of interesting. Sometimes the jokes are down here, sometimes the jokes are over here. You got to listen for them after a while, but they are absolutely there. If you’re passionate about it — if you’re an avid golfer, you will spend $1,000 for a titanium head driver. You will do stuff like that.</p>
+
+    <p>Pornography. I heard somebody say pornography — absolutely right. Addictions: alcohol, tobacco. Anything addictive is a passion-based thing. Seriously, this is easy. If you think — seriously, if you’re having trouble thinking about passions, here’s a great trick: think of the seven deadly sins. Seriously, I am not at all kidding about this.</p>
+
+    <h3>The Seven Dwarfs Study</h3>
+
+    <p>I have to digress for a moment. I have to share this with you. I read something absolutely fascinating the other day, and this is something that no one’s ever heard before. But some university out in the Midwest did a study — a human behavior study. What they did was they had people stand on campus, and when people came up they would ask them to name the seven dwarfs from <em>Snow White and the Seven Dwarfs</em>. Remember the movie? <em>Snow White and the Seven Dwarfs.</em> This is what they did, and it wasn’t so much whether people could do it. The question was: which of the seven dwarfs do you remember, and which do you forget?</p>
+
+    <p>Interestingly enough, very few people could name all seven. Most people could only name one or two. And think about this: who are the two most popular dwarfs? Who are the two dwarfs that most people in this survey remembered? Grumpy and Dopey. Those are the two that everybody remembered. Which was the one that nobody remembered? Happy was the one that nobody remembered.</p>
+
+    <p>Now, this sounds cute, but think about this. This is very profound if you think about it. Why is it that people remember Grumpy and Dopey and they don’t remember Happy? Or Bashful was the other one that nobody remembered, right? Think about this one. Of course nobody remembers Bashful. People — anyway, now by the way, good human lesson: listen, if you are bashful, no one’s going to remember you anyway, whether you’re a dwarf or anybody else. No one’s going to remember that. Okay. You got to remember it’s a very good life lesson, by the way, those of you who are sort of shy people. I was a shy person, believe it or not. I’m a shy lawyer. I’m a shy lawyer — that’s what I am.</p>
+
+    <p>But seriously, we tend to remember negative emotions much more than we remember positive ones. The dwarf that represented positive emotions like Happy — and Bashful — people had trouble remembering those. But Dopey, Grumpy, you know, the bad guys — they were the ones that people remembered. I just think it’s a wonderful study about human nature and how people react emotionally to different things. I love studies like that.</p>
+
+    <p>The amazing thing is that some large corporation probably paid $15–20 million to have that study done. That’s amazing to me — that people actually spend that money to come up with research proving something that we all knew ever since we were in our diapers. People always remember negative stuff more than they remember positive stuff. I’m sorry, that was a digression, but I had to do it.</p>
+
+    <h3>The Seven Deadly Sins as Passions</h3>
+
+    <p>If you’re thinking about passions and selling based on passions, think of the seven deadly sins. Don’t get me wrong — I’m not saying that they’re sinful. To me, the seven deadlies are simply seven very common passions that most people have to some degree. They’re not the only passions that are out there, but they’re great ones to start with, and entire industries have been based on each one of the seven deadlies.</p>
+
+    <p>Let’s go down the list real quick:</p>
+
+    <ul class="sins">
+      <li><strong>Pride</strong> Anything that makes me feel good about myself or better about myself as a person or as a professional.</li>
+      <li><strong>Lust</strong> No explanation necessary. Sex sells a lot of stuff.</li>
+      <li><strong>Greed</strong> “I got this hot new mutual fund — you’ll make a 12% return no matter what the economy is doing.”</li>
+      <li><strong>Envy</strong> “I got something you don’t have.”</li>
+      <li><strong>Anger</strong> Negative political ads and anything designed to rile your juices.</li>
+      <li><strong>Sloth</strong> Anything designed to make your life more convenient and help your body parts atrophy.</li>
+      <li><strong>Gluttony</strong> Eating and drinking too much.</li>
+    </ul>
+
+    <p><strong>Pride:</strong> Anything that makes me feel good about myself or better about myself as a person or as a professional. You can think of whole industries that do that for people — the whole self-help industry, the whole psychological counseling or continuing education — seminars like this. You’re here because you want to become a better business person, a better person. To some extent, I’m trying to appeal to your pride.</p>
+
+    <p><strong>Lust:</strong> No explanation necessary. Sex sells a lot of stuff, you know. Doesn’t it?</p>
+
+    <p><strong>Greed:</strong> Well, maybe not for you, sir. But that’s okay. Greed. “I got this hot new mutual fund. You’ll make a 12% return on your investment no matter what the economy is.” Is that how Bernie Madoff sold all those poor people? By the way, this will do a double-digit return on your investment no matter what the economy is doing. It’s snake oil. Absolutely. A lot of Wall Street is based on greed, as we all know.</p>
+
+    <p><strong>Envy:</strong> “I got something you don’t have.” Right. The guy driving the Maserati to and from work — also the guy driving the Smart car. I have to say this: anybody here own a Smart car? By the way, I hope I’m not offending anybody here. Okay, I apologize. You’re sitting in the front row now. Seriously, if you’re driving down the road and a Smart car passes you, isn’t that a little bit of a statement? You know, it’s like, “I’m greener than thou. I’m saving the planet.” You’re not there. A little bit of that. Am I right about this? I mean, you know, that’s why they designed them to look like that. It’s a statement.</p>
+
+    <p>I mean, don’t get me wrong. I am not saying that there are not people who are very passionate about the environment. There certainly are. But there are a lot more people who want to be perceived as being passionate about the environment — socially forward, socially positive, whatever it is — and this is one of the things they do for that image. It’s basically an image. And by the way, if you’re in a situation where Smart cars are passing you on the highway routinely, I strongly suggest that it’s time for a vehicle upgrade. Because you only got what, three cylinders, ma’am? Three cylinders in a Smart car? Or two, you think it is? Four? Okay, I’m sorry. Oh, okay. Well, that’s not a Smart car. That’s not a Smart car. That’s a car that’s way too expensive for what you get. But that’s not a Smart — I love — okay, I’m sure. No, the Priuses are great. I’m not going to knock anybody. Toyota’s a sponsor of mine sometimes, so I got to be careful.</p>
+
+    <p><strong>Anger:</strong> Negative political ads. Right. If you were watching television during the presidential election last year, you know what I’m talking about here. These are ads whose sole purpose is to try to make you hate the other candidate. And by the way, before you hate them too much, those ads are based on a lot of behavioral research. There’s actually been billions of dollars of research on voting behavior, and what the research is telling us is that when people are in the voting booth, they tend to vote <em>against</em>, not <em>for</em>.</p>
+
+    <p>So if I’m a political operative, if I’m working for a candidate as their marketing guy, my job is not so much to get you to fall in love with my candidate. My job is just to get you to hate the other candidate so much that you will vote for anything that is not him. That is basically — and that is based on a lot of research. And that’s why, unfortunately, both parties do these ads. I hate them as much as you do, but we’re never going to see the end of them, because they are effective. They work. They work, sad to say.</p>
+
+    <p>When you were in the voting booth last November, if you had a choice between a candidate that you did not like and a candidate that you knew nothing about, which way would you go? Just don’t answer that, because I know how most people would go. The ethical thing would be not to vote for either of them, but I know how most people would have behaved in a situation like that. So, not to get political here, but that’s the best example I can think of for anger — something intended to rile your juices.</p>
+
+    <p><strong>Sloth:</strong> Laziness. Anything designed to make your life more convenient and help your body parts atrophy. You know, you don’t have to walk to the television to change the channel anymore. You got the remote, right? The individual packages of cereal — you ever go to the grocery store, you see these things for 99 cents? The little individual packages of cereal. Forgive me, but were people really having issues with this? I mean, was it really that much of an effort to get up and get the cereal box and the milk and the bowl and connect the dots? I mean, was it really that hard to accomplish? Do we really need to have all that done for us?</p>
+
+    <p>Forgive me, I have to say this, though: I did give this talk about a month ago to another group, and somebody actually raised their hand and said, “Cliff, with that statement you’ve just told me that you don’t have any children. Because if you have kids, trust me, those little packages of cereal are a godsend when you’re taking them somewhere in the SUV for more than five or ten minutes.” So I totally get it now. There is a market for these things. It’s just that I’m not that market, which is absolutely fine.</p>
+
+    <p>But I’m saying, if you’re going to do that, why don’t you go the whole hog? Give me the milk, the sugar, and the spoon too. I mean, if you’re going to make my ass lazy, do it — do the whole hog, take me all the way there. Don’t — because even with those individual things, I still got to get the milk, I got to get the sugar, if that’s what I do. I still got work to do. Those companies have not done their job. But what they’re doing, of course, is they’re testing the market. This is just the first step. Then we actually have the machine that actually force-feeds you the cereal, you know, like you can see in some of the sci-fi movies. That’s where they’re going to next. So sloth, laziness — anything that makes life easier for people is going to sell.</p>
+
+    <p><strong>Gluttony:</strong> The last one, of course, is gluttony — eating and drinking too much. I don’t know anything about that one. I really can’t help you with that. I’m sorry. Why are you all laughing? Why are you laughing? It’s okay, I’m not offended.</p>
+
+    <p>Listen, truth: a body like this that I have does not happen overnight. This which you are looking at takes years of dedicated effort every day to get into this shape. And trust me, it’s a lot more fun than going the other way. Trust me about that. I know a little bit about gluttony. I’ve had some close encounters with cupcakes in my life, so trust me on that one.</p>
+
+    <p>So those are the seven deadly sins. They’re not the only passions that are out there, but they’re a great place to start, because most of us have them as human beings, and whole industries have been built on those seven deadlies.</p>
+
+    <p>So that’s passion. But passion is not the only reason why people buy things.</p>
+  </section>
+
+  <!-- ================= FEARS ================= -->
+  <section id="fears">
+    <h2 class="section-title">Fear and Anxiety: The Second Great Motivator</h2>
+
+    <p>The second set of emotions — and that’s really what we’re talking about here — should not come as a surprise to anyone: fears and anxiety. If you have a product or service that helps people sleep better at night, they will buy. In fact, in a down economy, studies tell us people will spend more on things that will help them sleep better at night, even when they’re not spending on things that get them excited about — things that appeal to their passions.</p>
+
+    <p>Give me examples. Whole industries that are based on people’s fears and anxieties: home security systems, burglar systems. You ever see the ads for home security systems? It’s always the same ad. I don’t care what the company is, they always use the same ad. It’s a house in the middle of nowhere, you know, like upstate Connecticut or someplace like that — Farmington, someplace like that. And there’s a creep, the light is on, there’s a creep in a ski mask who’s trying to get into the house. And who’s always in the house? It’s always the same two people. Who is it? Mother is bathing the baby. Exactly, right.</p>
+
+    <p>Now, if you know about burglars, they don’t work that way. Burglars do not work like that. Burglars laugh at those ads. A burglar — a professional burglar — the last thing in the world he wants is people in the house when he goes in. Even a mother and child — he doesn’t want anybody in that house when he hits that house, because he knows that if there are people in the house, things would get out of control and he’s no longer looking at a burglary. What starts out as a routine burglary rap may end up as something a lot worse, and they’ll spend the rest of their lives in prison. They don’t want that any more than you do. A professional burglar actually spends lots of time making absolutely sure you are not in that house when they go in and hit.</p>
+
+    <p>You’re asking me how I know this? Let’s just say that my clientele comes from all walks of society. Okay. And I do get a cut — no, I’m only kidding. Seriously, I sometimes go into the prisons, by the way, and I actually work with people in prison who are getting ready to be released early and to re-enter the mainstream, and I’m one of the people they ask to go in there. That’s how I know about how burglars think.</p>
+
+    <p>So there’s a situation, ladies and gentlemen, where Madison Avenue is giving you a totally false image of how burglars work for the sole purpose of scaring the bejesus out of you. That is what they’re trying to accomplish here.</p>
+
+    <p>Give me some other examples. Whole industries that are based on people’s fears: guns — well, yeah, for self-defense, absolutely, I would get that. Makeup? What’s that? Makeup, cosmetics. You know what, I’m not going to answer to that, and I’m not saying you’re wrong. I want to save it and I want to use that to illustrate a very important point, but we’re not ready for that one yet. You’re not wrong, but I want to elaborate on it. You’re not wrong and you’re not right either.</p>
+
+    <p>Hospitals, health care — well, emergency room care, let’s put it that way. Cosmetic surgery, I’m not so sure about that. Insurance — insurance, absolutely. Insurance. You know why we buy insurance? Because we’re afraid that we’re going to drop dead young and our family’s going to starve and live in a diaper box under the Brooklyn Bridge. We don’t want that. That’s why we buy life insurance, right?</p>
+
+    <p>How about lawyers? Folks, oh come on, I mean, I’m in the fear business, right? Seriously, when was the last time you called your lawyer when you were having a nice day? No, seriously, think about this. Right. When things are going great, there’s two people you never call — in a million years you never call your lawyer, and you never call your orthopedic surgeon. Those two people, never, never, never. You never call. Of course, if you’re calling your orthopedic surgeon, things are a little bit worse than they are when you’re calling your lawyer, right?</p>
+
+    <p>Seriously, in my law practice, when I pick up the phone, every phone call begins exactly the same way: “Cliff, thank God you picked up. Oh man, I was going to go to lunch. I thought you were my wife.” Okay, start talking. Tell me about the situation. How much of your body has the wolf eaten up, and what’s the story here? How bad is this? You know, seriously. And by the way, it’s exactly 7:00 right now, we have to keep time, you know. It’s very important.</p>
+
+    <p>But seriously, we lawyers are based on fear. If I’m going to try to sell you legal services, I’m going to try to scare you a little bit. That’s what I’m going to try to do.</p>
+
+    <div class="callout">
+      <span class="label">The Two Reasons — Final</span>
+      <p>People buy for one of two reasons: because something <strong>turns them on</strong> (passion), or because it helps them <strong>sleep better at night</strong> (fear). That’s it. That’s the whole engine.</p>
+    </div>
+  </section>
+
+  <!-- ================= SEGMENTATION ================= -->
+  <section id="segmentation">
+    <h2 class="section-title">Case Study: Selling Cosmetics by Segmentation</h2>
+
+    <p>Now, up to now we’ve been talking about some pretty easy examples, but now let’s tackle some tough ones, because this is a little tricky. Let’s talk about cosmetics. The young lady over here raised makeup, cosmetics. Okay. Let’s take a vote. If we’re a cosmetics company, we sell perfume to women, cologne to men. Are we going to use fear or passion? How many people say fear? You do. Very, very interesting, by the way, that you would answer that way.</p>
+
+    <p>How many people say it’s not — it’s not easy, is it? The more you think about it, you go, “Wait a minute, I — you can’t really decide.” That’s okay. Whenever you cannot decide whether to use a fear sell or a passion sell to sell something, it’s because your group is too big. You got to break it down into the point where you say, “Okay, the fear people are over here, the passion people are over here. I know what I’m doing now.” Marketing people have a great, very big word for that. They call that <strong>segmentation</strong>. But it really boils down to just: the fear people are over there, the passion people are over there. So we use fear for these people, passion for these people.</p>
+
+    <h3>Segment One: The Young Urban Professional</h3>
+
+    <p>Let’s use some examples. Cosmetics. Our target customer — we’re a cosmetics company — now our target customer is a young 20-something urban professional. It is Saturday night. He is splashing cologne on, going out to a nightclub. What is his motivation? Why is this gentleman putting perfect cologne on his face? Come on, people. Lust. Somebody said — I heard somebody say it. Lust. He wants to attract members of the opposite sex — or maybe the same sex. There’s all kinds of clubs in New York.</p>
+
+    <p>And by the way, that’s a very important thing to know, by the way. I’m serious. Because studies tell us gay men buy three to four times as much personal care products as heterosexual men do. Seriously. So if you’re in the cologne — if you’re in the cosmetics business and you’re targeting men, I think you have to be a little gay-friendly. I do think so, because that’s going to be a big part of your market.</p>
+
+    <p>So our young man, gay or straight, he’s going out to a nightclub, he’s splashing on cologne. Are we going to use fear or passion to sell to this guy? Of course. You know, “Our perfume has genuine cockroach pheromones. You’ll attract everything within a 10-mile radius, whether you want it or not. It will be your choice whether you go home alone tonight.” And that was an ad, by the way, in the 1960s for men’s cologne. Remember the company that did that? “It is your choice whether you go home.” You could never get away with that today. It is amazing, right? Of course, that would not be the sales pitch.</p>
+
+    <p>What you would do instead is you do something like real sexy stuff with like bodies twining together, and then you show a bottle of the perfume. Isn’t that how all the perfume ads look? They all look the same way. They all do that same — you know, they all do. Okay.</p>
+
+    <h3>Segment Two: The Woman in Her Seventies</h3>
+
+    <p>But now let’s change gears. Now that’s our 20-something professional. But now again, we’re selling perfume, we’re selling cologne, and now our target customer is a woman in her 70s — a woman aged 70 to 80. Okay. This person is going out somewhere, she’s splashing perfume on. What is her goal? Is it lust? Is she trying to attract everybody, every man in the room? I don’t think so. Although that may be changing, by the way. Things are — I can’t really say this anymore categorically. Things have changed a little bit in the elder market.</p>
+
+    <p>Very scary statistic, by the way: one of the biggest health care issues in nursing homes is venereal disease. Did you hear about this? That, to me, is scary. That scares me worse than — I’ve talked about all day tonight. Things are changing in this world. But traditionally, at least, if a woman is putting on perfume, what is her objective? What is she trying to accomplish?</p>
+
+    <p>Anybody? To appear — not so much to appear young, but to appear <em>not old</em>. And specifically — how — you’re not getting it. Because you’re not — you’re being too politically correct. Thank you, sir. Say it out loud. She doesn’t want to smell like an old lady. You’re absolutely right about this.</p>
+
+    <p>Okay. It’s no secret that as we age, our body chemistry changes, and sometimes the results of that are not very pleasant. And by the way, not to be sexist at all about this: men have exactly the same issues when they get older as women do. It’s just that because we’re men, we don’t give a damn. We don’t. Women do, men don’t.</p>
+
+    <p>And by the way, I can support — statistics to support everything I’m saying here. So if you are in the perfume, cologne business, you can make a fortune selling perfume to older women. But you’ll never make a dime selling cologne to older men — men over 50 — unless they are gay or Italian. And we will not elaborate on that.</p>
+
+    <p>Let’s just say that some ethnic stereotypes do have some validity. Let’s just say that right now. No, it’s true. Certain ethnic groups tend to buy different kinds of products more than others, and it’s important that you know that information. Italian-American men tend to buy cologne at older ages than most other ethnic groups, and there’s actually statistics to support that.</p>
+
+    <p>So see, you didn’t think you’d get anything practical out of this course, right? You didn’t think — well, be a bunch of BS, right? I just taught you how to run a cosmetics company, darn it. And it’s absolutely free. It’s SCORE. Okay, I’m not saying anything.</p>
+
+    <p>So these are the two reasons why anybody buys anything. What I have just taught you tonight, ladies and gentlemen, is extremely powerful information. I’ve gussied it up a little bit to make it funny, but this is one of the biggest insights that I have had in 32 years of working with entrepreneurs. It isn’t about needs and wants. It’s about fears and passions.</p>
+
+    <p>If you’re looking to launch a business where you’re selling stuff to people, you got to know who those people are. You got to know what those fears and passions are that they’re feeling, and you have to ask yourself: now, how are those fears and passions not being addressed in the marketplace? Where are the opportunities here? What fears and passions are people feeling that they weren’t feeling five years ago? Where are the opportunities? Where are things changing? Remember, I said things were changing in the elder cosmetics market for women. I was absolutely serious about that. How is that changing, and how can we address that? That’s how entrepreneurs make money.</p>
+
+    <p>Entrepreneurs do not succeed by getting ideas out of their heads. That’s a myth. Entrepreneurs succeed by looking at people. Don’t get me wrong — I’m not saying that they’re not intelligent. They are. But what they are not is intellectuals. They don’t come up with ideas out of their head and then foist them onto a marketplace. That’s cold calling. What they do is they look at — they use their five senses. Successful entrepreneurs have very well-developed senses: sight, hearing, taste, touch, smell, and that other one that they call umami or something like that, which I’ve never figured out. It comes from Japan. Nobody understands it.</p>
+
+    <p>They use their five senses to observe the world around them and really soak up as much information as they can about people’s fears and passions, and they let those opportunities dictate what they do. They let the marketplace tell them who they are. They don’t go out and say, “I’m a small business attorney.” They look at people, they look at what’s needed, what people’s fears and passions are, and then they go out there and say, “I can help you with that. I can help you with certain things.” That’s how a successful entrepreneur — or even a successful lawyer — operates.</p>
+
+    <p>So now that I’ve gotten you to buy into this — and I hope I have, because this is very powerful information — once you know how to play this, you can succeed at just about any kind of business. Once you grasp that it’s all about understanding people’s fears and passions, now I can teach you how to sell anything to anybody. It’s a three-step process.</p>
+  </section>
+
+  <!-- ================= THREE STEPS ================= -->
+  <section id="three-steps">
+    <h2 class="section-title">The Three-Step Method</h2>
+
+    <p>You’re in a meeting with someone. Let’s say it’s a physical meeting, but it can be a phone call, it can be an email exchange, it can be whatever. Okay. And the person’s on the phone, the person’s busy, whatever. “I’m sorry, Mr. Eno.” Okay.</p>
+
+    <ol class="steps">
+      <li>
+        <span class="step-title">Step One: Keep your mouth shut.</span>
+        <p>Don’t start talking. One of the biggest mistakes that salespeople of all kinds make is they start talking too soon about what they have. They start talking about their inventory, or what’s in their resume. This, by the way, this works for job interviews too. Those of you who are looking for work, who are looking for a regular job, this works for job interviews, because let’s face it: when you are in a job interview, you are selling. It’s a sales meeting. You are selling yourself, your resume. Okay. This works in job interviews too.</p>
+        <p>Keep your mouth shut. Don’t start talking about what’s on your resume, what’s in your inventory. Because think about it: what are you doing when you do that? That’s cold calling. “I got this basement full of dead fish that’s rotting away by the minute.” Remember that? That’s what you’re doing. You’re cold calling.</p>
+        <p>What you do: get the other person talking about their fears and passions. Get the person talking about their fears.</p>
+      </li>
+      <li>
+        <span class="step-title">Step Two: Focus the conversation to a fear or a passion you can do something about.</span>
+        <p>We all have fears, we all have passions, but we’re not thinking about those all right now. You’re probably all thinking, “When is this guy going to shut up so I can go home?” Right? That’s what you’re thinking right now. So if I’m trying to sell you something, I got to get you to focus on a fear or a passion that I can do something about, for which I have a solution. I got to get you to feel that fear, that passion, right here, right now, in this room, 7:12 in the evening on Tuesday, January the 15th, Martin Luther King Day, 2013.</p>
+        <p>That’s what I got to get you to. I got to get you to the point where I can look into your beady little eyes and I see that you’re feeling that fear, that passion, right now. I got you. I’ve hooked you. Right. That’s step number two. I got to get you to that point. I got to scare you, I got to get you thrilled, whatever — whichever way I’m going.</p>
+      </li>
+      <li>
+        <span class="step-title">Step Three: Offer the solution.</span>
+        <p>Then the third step, the final step. Now you’ve looked — you’ve looked into — what was the famous quote from George W. Bush? “You look into the other person’s soul.” Right? Remember he said that about Vladimir Putin? “I looked into his soul.” And you can see that that person is feeling that fear, that passion, right now. Now you open your mouth for the first time. Now you start talking, and you offer the solution. You offer the solution.</p>
+      </li>
+    </ol>
+
+    <h3>What Step One Sounds Like</h3>
+
+    <p>So before we get started: “I noticed in your office you got a million pictures of sailboats. You’re obviously a very avid sailor. Is this just a weekend cruising thing, or do you race competitively?” I guarantee you, ask any sailor that question, they’ll go on for 45 minutes about their favorite hobby, and they won’t even notice that you’re there. But they’ll think you’re the most brilliant conversationalist in the world, and they will love you. I’m serious about this.</p>
+
+    <p>Don’t start talking too soon. Get the other person talking about their fears and passions — what keeps them awake at night, what turns them on. Easiest thing in the world to do. Think about this for a minute. When we get together with our friends or with our buddies after work, or with our friends for a glass of wine or something, or with our families at Thanksgiving, what do we spend 95% of our time talking about? We talk about the things that turn us on, and we talk about the things that keep us awake at nights. Don’t we? These are the two things that we love talking about more than anything else as human beings.</p>
+
+    <p>In fact, social psychology tells us that this is how we pick our friends and lovers, by the way. You thought this was just about selling? This is all about — this is about how to find a mate too. Think about it. Have you ever wondered why it is that some people are attracted to you and some people aren’t? No matter how hard you try, you just can’t make it with certain people, but other people are crawling all over you, and you can’t do anything about that. Remember high school? Right. I know, sir. It was like that for you too. I know exactly.</p>
+
+    <p>But seriously, have you ever wondered why it was that certain people got you and certain people didn’t? The answer was: the people who were attracted to you, and the people that you are more likely to be attracted to, are the people who share — or at least empathize with, or at least show that they care about — your fears and passions. The people that are more likely to be attracted to you, and that you’re a lot more likely to be attracted to yourself, are the people who share, or at least show an interest in, your fears and passions.</p>
+
+    <p>Think about it. It’s very hard to like someone who does not share your fears and passions or doesn’t care about them. Don’t get me wrong — I’m not saying you hate that person, but you just don’t care about them. You could take them or leave them. Whereas if somebody does share your fears and passions, you’re much more likely to get closer to that person — sometimes physically. It doesn’t matter what they look like, by the way. Studies do show that at a superficial level, opposites can attract each other. The person doesn’t have to look anything at all like you. But if the person shares your fears and your passions, or at least demonstrates an interest in those things, you are much more likely to get closer to that person.</p>
+
+    <p>What have I just taught you, ladies and gentlemen? I’ve just taught you how to make friends. You didn’t think you’d learn anything in this class, right? I’ve just taught you how to make friends. If you want somebody to like you, the best way to do it is to show that you share, or at least empathize with, their fears and passions. Easiest thing in the world to do: get them talking about those fears and passions and show an interest in them. That’s all you got to do, and I guarantee they will like you.</p>
+
+    <p>And by the way, don’t they tell you when you’re interviewing for a job, the first thing is to get the interviewer to like you? Right? You ever taken a course in job interviewing? Right. I just told you how to do it. Get them talking about their fears and passions. That’s step number one. Get them to do all the talking. You should be doing less than 10% of the total talking. They should be doing the other 90%. This goes against the grain of some interview books, by the way. I totally buy into that, but this is what works. That’s what works. Other stuff does not work. That’s why I talk about it.</p>
+
+    <h3>What Step Three Sounds Like</h3>
+
+    <p>Now, the third step. Oh, you’re a coin collector and you need a 1916-D Mercury Dime to complete your collection of Mercury dimes. You know, I know you can find one of those. I got a friend on eBay who sells coins, and I think he’s got one. I don’t know what condition it’s in, but he’s got one. Right off the bat, you’re hooked, right? If you’re a coin collector, you’re really hooked if that’s the one piece you need to finish your collection, and somebody — and I know somebody who has it. Trust me, that’s going to happen. Okay.</p>
+
+    <p>Or: “Gee, you need help with that project? I can help you with that.” Or: “Gee, you need that? I know somebody who does that kind of repair work on old cars and stuff. I know — I know somebody who does.” This is how, and when. And believe me, the minute you say that, you’ve got that person’s absolute undivided attention.</p>
+
+    <p>Now, these are the three steps. How many of you here would feel comfortable doing this? Right? Think about it. What you are not imposing on anybody here. There is nothing illegal, immoral, or sleazy about doing it. In fact, you are doing this person a favor. What are you doing when you sell this way with these three steps? What are you doing that the cold callers are not doing?</p>
+
+    <p>Answer: you’re showing interest in the person. When the telemarketer calls you, why do you hate them? They show no interest at all in you and who you are. They don’t care about your fears and passions. They’re hoping that you’re one of the one person in 10,000 who’s interested in seafood for dinner tonight. That’s what they’re hoping. That’s why you hate those people. They don’t care about you.</p>
+
+    <p>I’ll take questions a little bit later, at the end of this, but this is a very important point. What differentiates this from cold calling is the fact that this way, you’re showing the person you care. You’re helping them solve their problems. You’re helping them live a better life. How can they not respond to that? And even if it doesn’t work — even if you don’t get what you want, even if you don’t get the sale that you want — you’ve made a friend, and good things will come of that. They will help you with your networking. They will help you find what you want. They’ll introduce you to some people in their network. This is how you network effectively as well — through this technique.</p>
+
+    <p>You got to get the person to like you and care about you, and the only way that you’re ever going to do it is to show that you like or at least care. You may not like them — you know, if you’re selling to lawyers, nobody likes lawyers — but at least you can show that you care about them and that you care about how they really are, not just the myth, the stereotype.</p>
+
+    <p>See, when you don’t really care about — when you don’t really know your market, it’s very, very hard to sell to people that you don’t know anything about, and I’ll tell you about that in a minute. It’s very hard to do. I’m not saying it’s impossible, but you can’t do it. These are the three steps to selling.</p>
+  </section>
+
+  <!-- ================= KNOW MARKET ================= -->
+  <section id="know-market">
+    <h2 class="section-title">You Must Know the People You Sell To</h2>
+
+    <p>Why do I say it’s important that you have to know the people you sell to? Because if you really don’t know the people you sell to, what happens is you don’t really know what their fears and passions are. Think about that. Those are two very intimate questions, aren’t they? What turns you on? What keeps you awake at night? Those are kind of intimate questions, aren’t they? You really have to know somebody well to know what the answers to those questions are going to be.</p>
+
+    <p>If you don’t know the answers to those questions, what happens is you end up selling the stereotypes, and that’s a bad thing. First of all, it’s a bad thing to do ethically to somebody, but it’s also a very stupid thing to do, because you’ll never get sales.</p>
+
+    <p>Let me give you an example: lawyers. Anybody here have lawyers in their family? Close? You know, I know we have one lawyer — I know in the audience. You don’t have to raise your hand because I know it’s you. My competition — he’s a good guy. You have lawyers in your family? Okay. I’m going to ask you to be quiet for a moment. I’m going to talk to the rest of these people. People don’t know anything about lawyers.</p>
+
+    <p>Let’s say that you were trying to sell to lawyers. What is a lawyer’s biggest fear? What keeps a lawyer awake at nights more than anything else? Believe it or not, there’s an answer to that question. Every year the bar association out in the Midwest does an annual survey of its members. It’s called the Lawyer Satisfaction Survey, and they actually ask them like 20 different questions, and one of the questions is: “When you think about your practice, your professional life, what keeps you awake at night?” They actually ask that question in so many words, and they get a bunch of answers, and they rank them one to ten. Every year I actually subscribe to this survey. I get it every year. Every year the same answer comes out number one.</p>
+
+    <p>So let’s play a little game here. What do you think a lawyer’s biggest fear is? The thing that keeps lawyers awake more than anything else in the world — assuming that they have souls, of course, and can sleep at all.</p>
+
+    <p>Yes — getting sued for malpractice. Number two. You’re absolutely right. Number two: that lawyers absolutely worry about getting sued for malpractice. Anybody else? Another client — losing clients, losing business. Number five, right? Clients disappearing because the work’s no longer relevant. Anybody else? People won’t like them. You know what? That doesn’t even make — that doesn’t even make the list. Really. Lawyers really do not care what other people think of them. That’s one of the areas where the lawyer stereotype is absolutely true.</p>
+
+    <p>Miss — what say? Losing reputation. Number three. That’s different than getting sued for malpractice — like getting sued for ethical violation or something like that. Yes, disbarment. Well, disbarment is also like losing your reputation. Getting disbarred, yeah, that’s number three. Absolutely. Not wrong. What? Getting enough business. Well, that’s kind of like number five, losing business or something like that. Paying their bills. Number eight. Paying your bills, number eight. You’re all doing great, but you haven’t gotten number one yet.</p>
+
+    <p>How about having a client come back to attack you personally? You know what, I worry about that every day, but that’s my clients — look like you. I’m sorry, I couldn’t resist. Fear or passion? Well, it’s a fear. It’s specifically a fear.</p>
+
+    <p>Okay, what are lawyers — seriously now, let me ask the people who said that they know about lawyers. You’re a lawyer. What’s your biggest fear? What keeps you awake at night? You’re my competition, so you got to look good here. This is on TV, baby. Well, the malpractice would be number — would be number two. About sounding stupid? Oh no, we don’t worry about that, ’cause we never do. We never sound stupid. How dare you. Anybody else? Not billing, not billing enough. Number eight, yep. Anybody else? No. The case — okay, Miss Peace. Peace, peace, love and understanding. We do not worry — trust me, that’s not our job. If the world were ever to become a peaceful place, we’d be out of work. That’s absolutely — that’s interesting. That should be on the list, but it isn’t.</p>
+
+    <p>Sir, in the back? Evidence. Evidence — like what? I read about evidence all the time. That’s why I destroy it all. I’m only — I’m only kidding. I never do that. I don’t do courtroom work anyway. Okay, seriously. If you don’t know lawyers, you’ll never get this. Sir? Divorce. Okay, no, you’re close. You’re not there. I’ll give you credit for that. Getting divorced specifically? No. More — un-fear, at least according to this one survey that this Midwestern bar association does: not having enough time with their families. Number one.</p>
+
+    <p>So you’re kind of close with the divorce, but it’s not having enough time. Lawyers work impossible hours. When I finish this talk tonight, I’m going to be up until 1:00 in the morning doing work for my clients that I didn’t get to because I had to do this talk today. We work like 24 — when I was a young lawyer, my family did not see me for weeks and sometimes months on end, especially at year end, because everything had to be done by year end for tax reasons when I was a young lawyer. So it was brutal. I used to sleep on conference room tables, believe it or not. The one thing you can be sure of in any law firm: all the bathrooms have showers, and all the conference rooms have fold-out sofas that fold out into like a sofa — they all have that, because people do all-nighters, and a lot of all-nighters, when they work as young lawyers.</p>
+
+    <p>Especially lawyers worry a lot about not growing old — about growing old and their kids not knowing who they are or hating them or something like that. They worry a lot about that. Trust me, they do. Most lawyers do.</p>
+
+    <p>So seriously, if you don’t know lawyers, you really don’t know that that’s the case. If you’ve ever been really truly close to a lawyer — especially if you’re married to one — you know exactly what that fear is all about. See, don’t get me wrong — you would just — PC to come out and say it, so it’s absolutely okay. But you know — you’re a young lawyer, you work in a very established firm, a good firm, actually. I know you work some crazy hours just like I do. You know, but I bill more than you do. Okay, I’m only kidding. Seriously.</p>
+
+    <p>That’s why I say you have to really know what about people. You have to know what their fears and passions are. And if you don’t — if you’re selling to a group of people that you really don’t know all that well — you got to get a partner who does. You got to hook up with somebody who knows that market, who knows them inside out, and who can help you figure out what marketing strategies and tactics are going to work and which ones are not going to work. You can’t do it yourself unless you know that group really, really well.</p>
+  </section>
+
+  <!-- ================= LLC PITCH ================= -->
+  <section id="llc-pitch">
+    <h2 class="section-title">A Real Sales Pitch, Parsed</h2>
+
+    <p>So now that I’ve taught you this, let me give you an example in real life of how this works. It really is very simple. Let’s say that I was a lawyer, and let’s say that I was trying to sell you on something called a limited liability company — an LLC. Now some of you know what that is, some of you don’t, but it doesn’t matter. I’m trying to sell you an LLC.</p>
+
+    <div class="callout">
+      <span class="label">The Pitch</span>
+      <p>“Ladies and gentlemen, I’ve worked with over 15,000 people just like yourself who are trying to start businesses and get them up off the ground. In the 32 years that I’ve been doing this, if you’re like virtually every one of those people that I’ve worked with, one of the things that’s keeping you awake at nights probably is the fear that you’re going to start a business, something’s going to go wrong, you’re going to get sued by somebody, and you’re going to lose your house. Am I right about this?”</p>
+      <p>“And you’re right to be worried about this. We live in a very litigious society. Anybody can sue anybody for anything. Don’t let anybody tell you otherwise, and it’s something that you have to learn to deal with when you start a business of your own. But you don’t have to live with that fear. You do not. There are some things we lawyers can do that will put a wall up between your business assets — the stuff that you use in your business — and your personal assets: your house, your cars, your stamp collection, your autograph photo of Elvis, your 401k from your former employer, your kids’ college tuition fund. With one of these wall things in place, if you have a business and, God forbid, you do get sued, well, your business assets are still going to be subject to attack — that’s why you have to have insurance on those things — but all your personal assets, your house, your cars, whatever, will be behind the wall and will be safe and protected from attack. One of these wall things we call an LLC, or a limited liability company. Would you like to hear more?”</p>
+    </div>
+
+    <p>How many of you are going to say no to a sales pitch like that? It’s pretty effective, isn’t it? Now let’s parse it out. Let’s see why it was so effective. Why did the sales pitch work?</p>
+
+    <p>Well, first of all, I cheated a little bit. I skipped step number one. I didn’t get you talking about your fears and passions. Why? Because I’ve worked with entrepreneurs for 32 years of my life — well over 15,000 of them — and everybody worries about that. I know that every one of you has that fear, so I don’t have to get you talking about it. I know it’s there. So I went right to step number two, and I scared the crap out of you. I painted a picture of you getting sued and losing your house.</p>
+
+    <p>Now, here I am trying to make you excited about entrepreneurship, and I’m telling you about all this — this awful, horrible stuff that could happen. The fact that you could be sued, that you could indeed lose your house. Now why did I do that? To scare you? No — because if I did that, that would be unethical. What I did was I got you there. And believe me, some of you guys actually did a little bit of this when I did this. You actually reacted. You actually sat back up a little straighter. I really hit you there with that whole thing. You know, I definitely got to you. Then I said, “You don’t have to live with that. There’s something you can do about it.” And now the only question in your mind is: can I afford one of these LLC things?</p>
+
+    <p>The answer is you absolutely can. If you go to my website at CliffEno.com, I’ve got my whole fee structure right up there. You don’t have to ask me how much it is. It’s all up there on my — and by the way, there are attorneys in the state that hate me because I do that. I put all my fees up on my website. You know exactly what I’m going to charge you for different kinds of work. People hate me for that. I’m a state-of-the-art guy when it comes to my profession, right? Rocket science. Remember, we’re behind the curve. We’re still using the 8½-by-14 legal pads. You got to remember that.</p>
+
+    <p>Okay, so that’s how to sell just about anything to just about anybody. You got to know them. You got to know their fears and passions, and you get them talking about those. You focus the conversation to a fear or a passion you can do something about. Then you nail them between the eyes so they can’t get away, and tell them, “I can help you with that. I can do something with that.”</p>
+  </section>
+
+  <!-- ================= RESUME ================= -->
+  <section id="resume">
+    <h2 class="section-title">Don't Become a Prisoner of Your Resume</h2>
+
+    <p>Now there’s one more secret you have to know about selling, and then I’m going to shut up. And this is probably the most profound thing that I’ve learned about selling in general, but more importantly about entrepreneurship. It is this: if I had to pick the single key to succeeding as an entrepreneur, as a self-employed person, as a small business owner, it is this — you have to avoid becoming a prisoner of your resume.</p>
+
+    <p>Now what do I mean by that? You know, this is especially true of people who come from a corporate background. People who come from a corporate background had a real problem with this, but it’s something that we all have to learn. You have to learn to get outside your comfort zone, and that is a tricky thing for most of us to do, because it is scary.</p>
+
+    <p>Here’s what’s going to happen to you when you’re in — I got good news and I got bad news here about the entrepreneurial world. The good news is: even in this crappy economy, with all the stuff about the fiscal cliff and the debt ceiling and all this kind of crap that’s scaring us to death in our newspapers — and by the way, why do you think the newspapers are scaring us to death these days? Because it sells newspapers. Precisely right. They’re in the same fear and passion business that the rest of us are, whether we like it or not, and fear tends to work a lot better than passion. That’s the way they do it.</p>
+
+    <p>Seriously, even in this crappy economy, there are some wonderful opportunities out there for entrepreneurs, for self-employed people, for new small businesses. There’s tons of opportunities out there. That’s the good news. But there’s some bad news: very few of those opportunities are going to be things you have ever done before. These are things that are not going to be on your resume. They’re going to be things that you kind of know something about — and if you’re a professional, you should know about them — but they’re not going to be anything that you’ve ever really done before.</p>
+
+    <p>Here’s — I guarantee you this: if you go out and start pitching business from somebody — let’s say you’re a consultant, you’re trying to patch a consulting business — you’re going to be in a meeting with somebody, and I guarantee this will happen to you. This will happen to you. You’ll be in a meeting with somebody, you’ll be pitching whatever, you’ll be talking, trying to offer solutions, you’ll be doing this, and the person will say, “You know what? I kind of like your style here. You’ve obviously attended a Cliff Eno seminar so you know how to sell.” Okay, that’s not going to happen.</p>
+
+    <p>“You know, but I like your style. I really like the way you’re approaching this. You know what? I’ve got this Frugal Framis project over here. By the way, Frugal Framis, just so you know, it’s a totally made-up word, and those of you who are thinking about writing it down should be aware that I have trademarked it. I own FrugalFramis.com, .net, .org, .us. I mean, do not use this. You’ll hear from my attorneys. Okay. It’s just a made-up word. Doesn’t mean anything. It’s like ‘widget.’ I got this Frugal Framis project here. I got a little budget allocation for it, but I don’t really want to put one of my people on it. I’m looking for an outside consultant to help us with this. Are you interested?”</p>
+
+    <p>Whatever the Frugal Framis is, I guarantee it’s something that you’ve never done before. But you do know a little bit about it. You’ve heard about it. It’s in your field. You’ve maybe read something about it. Maybe you took a seminar where somebody talked about it. You know a little bit about it, but you’ve never actually done the Frugal Framis, whatever it is.</p>
+
+    <p>Okay. It’s very tempting in a situation like that to say, “Well, geez, I don’t know anything about Frugal Framis. I’ve never done it. I don’t know anybody else who does.” If you say that, that will be the end of the interview. Interview is over. The only reason that you’re sitting in that person’s office is because they want help with that Frugal Framis project, whatever it is. The losers are the ones who say, “I don’t know anything about it.” That’s what I mean by becoming a prisoner of your resume. It’s letting your resume dictate who you are.</p>
+
+    <p>Here’s how a pro handles that situation. I’m going to pick you, sir, just because you’re looking at me, and also I like the folded hand thing too, because that’s exactly what this person’s going to be looking like too, so it’s a very natural thing for me. That’s okay. Anyway.</p>
+
+    <p>So you’re the guy who just said, “You need help with this Frugal Framis project.” I’m looking you straight in the eye: “Frugal Framis? Yeah, I can help you with that.” Smile. Do not break eye contact. Do not show fear. Do not show fear, because these people are Rottweilers. They can smell, feel fear a mile away. Do not show how nervous you are when you do this. I guarantee, if you do this, the person’s going to say, “Really? You know something about Frugal Framis?” “Well, I’m not going to lie to you. I’m not going to say that I’m an expert or I’ve done nothing but Frugal Framis all my life, but I have had exposure to Frugal Framis. This looks like a very simple Frugal Framis project. It looks very straightforward. I can definitely help you with a Frugal Framis project at this level.”</p>
+
+    <p>You can tell I’m real good at this. Real good at this. And they really — “You’re the first person we’ve spoken to that says that they can help us with this. What — what do you charge?” Don’t go cheap, right? Charge lots of money for this. Don’t be — you’re not going to do this for 20 bucks an hour. Make sure you’re getting paid for it. Get the business. That’s my point. Say yes. Get the business.</p>
+
+    <p>And then, when you’re going down the elevator to the lobby, and there’s nobody else around, you make — that’s when you do your meltdown. “Holy crap, what did I just do? What did I just commit to? I don’t know the first thing about Frugal Framis.” Because let me tell you what you’re going to do in a situation like that. Fear is a wonderful motivator. I have found it’s probably the best motivator there is. When you’re scared of something, you’ll do anything to get that fear off your table. Right? Didn’t I just say that a few minutes ago?</p>
+
+    <p>So you’re going to go home, and you’re going to get on your laptop, and you’re going to go to Amazon.com, and you’re going to buy every book that has Frugal Framis in the title. You’re going to get <em>Frugal Framis For Dummies</em>, all six volumes — you know the seven-in-one that they always do, you know, seven books in one. You’re going to get all those books. You’re going to spend the next two weeks of your life just immersed in Frugal Framis, and you’re going to do the best possible job that you can on that Frugal Framis project.</p>
+
+    <p>Because when you do, let me tell you, two good things are going to happen. Number one: you do a good job on the Frugal Framis project, now you’re in. You’re on the inside with that company. You’re no longer some guy off the street. Now you’re a guy who did the Frugal Framis — or the person who did the Frugal Framis project — and you’re going to get other work from that company.</p>
+
+    <p>The other good thing that happens, especially if you’re working for big companies — let me tell you something about big companies. They’re all lemmings. They all do the same stuff at the same time. When one needs a Frugal Framis, they all need a Frugal Framis. Right? So seriously, if you do a Frugal Framis project for Company A and now you’re interviewing with Company B, you can say, “Well, you feel like most — you know, whatever departments you know — you probably have a Frugal Framis.” “Yes, I was going to talk to you about that.” “Well, I just did a Frugal Framis project.” You did a Frugal Framis project? Your fee just doubled.</p>
+
+    <p>This is it. You are now the Frugal Framis person, and word gets around about that. “Hey, there’s a guy out there — there’s a sucker out there that actually knows something about Frugal Framis.” You know, that’s how this — this is how people build reputations. This is how you expand your knowledge. This is how you grow as a professional. I cannot tell you how often I have used this technique to my benefit, where I’ve said yes to something that I wasn’t really sure if I could do it or not, but I said yes. I made it the focus of my life for a while, and I learned. And not only did I survive, but it opened the doors to some amazing stuff that never would have happened if I had said no.</p>
+
+    <p>And I’ll give you an example about that, and then we’ll close.</p>
+  </section>
+
+  <!-- ================= EBAY STORY ================= -->
+  <section id="ebay-story">
+    <h2 class="section-title">The Frugal Framis That Changed My Career</h2>
+
+    <p>I have a relationship with eBay. Some of you know this. eBay actually sends me around the country — basically scaring the hell out of their sellers. I talk about taxes and stuff and how they have to pay income tax and sales tax. A lot of these people don’t know that they have to do that. You know, it starts out as a hobby, it gets out of hand, and before you know it they’re selling $50,000 a year on eBay and they got to pay taxes on it. You do have to pay taxes on that, sir. You do have to pay. Seriously, people look at me like, “Really? You got to pay?” Yes, you do have to pay taxes if you’re doing that kind of stuff and you’re making money. Yes, you do have to pay taxes. Absolutely.</p>
+
+    <p>So I’m scaring — I’ve actually had people faint during this. It’s actually wonderful. I’ve had people who sold hundreds of thousands of dollars of stuff on eBay, they never paid taxes. That’s a really cool thing. The IRS is starting to send people out to my talks now. That’s actually kind of scary. But seriously, eBay does this, and they actually pay me for this.</p>
+
+    <p>Let me tell you about how I got my relationship with eBay, because it’s a perfect example of what I mean by getting out — getting out of your resume, not becoming a prisoner of your resume or your past. Okay. Picture the scene: August 2004, Saturday afternoon, hot summer day, 92 degrees, in the shape I’m in, in my backyard in my T-shirt and shorts — I know, too much information — I’m grilling hamburgers for dinner. Okay. My cell phone goes off, and I see it’s <em>Entrepreneur</em> magazine. Now, at this point I was not a regular writer for <em>Entrepreneur</em>. I am now, but back then I was only doing one or two articles a year for them, because I had met the editor-in-chief at a cocktail party a couple of months before, so I was on their radar screen.</p>
+
+    <p>So I pick up the phone. This is odd. So I pick up the phone. “Cliff Eno.” “Cliff, thank God you picked up.” I told you every phone call begins like that, right? But this was not a legal call. This was not a law client. This was Reva Lazansky, who was at that time the managing editor of <em>Entrepreneur</em> magazine. She’s calling me on my cell phone on a Saturday, so something’s going on here. “Miss Lazansky, love to hear from you.” She goes, “Cliff, I really need your help. I’ve looked at my Outlook contacts. You’re probably the only person who can help me with this. I need you to be on a panel discussion in New Orleans on Monday.” This is Saturday. She’s giving me two days to prep for a panel discussion.</p>
+
+    <p>So I said, “Okay, little short notice here, Reva. Give me — give me more information. What’s going on here?” So she gave me the background. Unbeknownst to me, <em>Entrepreneur</em> magazine was in discussions with eBay to do a special issue of their magazine for eBay sellers. They were going to call it <em>eBay Entrepreneur</em>, because eBay has about — really about 50 million sellers, by the way. It’s amazing how many people they have. That’s 50 million sellers around the world. And this was going to be a magazine specifically for them that <em>Entrepreneur</em> was going to publish, and they were going to launch this magazine at eBay’s annual trade show. It’s called eBay Live, and that year it was being held at the Morial Center in New Orleans — pre-Katrina New Orleans — that year.</p>
+
+    <p>So she called me, and she said, “Cliff,” and they were going to launch this product. They were going to have an all-star panel of some of the top names in entrepreneurship. Some of these names may be familiar to you: Michael Gerber, the guy that wrote <em>The E-Myth Revisited</em>, which is like the classic of entrepreneurship; they had Bob Kiyosaki, the guy that does the <em>Rich Dad Poor Dad</em> books — you’ve all heard of him; they had Marsha Collier, who writes all the <em>eBay For Dummies</em> books — there’s about 12 of those. They were going to have all these people talking about the life of an eBay seller to try to launch this new magazine.</p>
+
+    <p>And so this is what was going on. So Reva was on the phone that morning with Meg Whitman, who at the time was the CEO of eBay — now she’s the CEO of Hewlett-Packard, some of you know that. And at one point in the conversation, Meg said, “You know what, Reva, I know this is kind of short notice, because the program’s on Monday, but it would really be great if we could get someone on this program who could talk about the legal and tax issues involved in selling on eBay, because a lot of our people in the field are starting to get questions we don’t know how to answer. You know, you really need more of a small business attorney. You know, our attorneys are all big corporate people. Can you find us someone on the panel who could just talk for a few minutes about the legal and tax issues of selling on eBay?”</p>
+
+    <p>So, Cliff, this is what I need. Can you do this for us? Now I’ll be very honest with you folks: when this conversation took place, I had never sold a single thing on eBay. I had never — I mean, I bought a couple of things on eBay. I certainly knew what it was. I knew what auctions were. I’d been at auctions before. Most of you have. But no more than any of you in this room know about that process, right?</p>
+
+    <p>It would have been very easy for me to say, “An eBay lawyer? I’ve never heard of such a thing. You know, I don’t even know if one exists. If eBay doesn’t know, if Meg Whitman doesn’t know, how the heck am I supposed to know?” Right? But I’m enough of an entrepreneur to know that you never, ever do that. When someone throws you a curveball like that, you always find a way to say yes, no matter what.</p>
+
+    <p>So I said, “Well, Reva, let me — let me think about this for a minute. Just a couple of questions. How long would I have to speak? How many slides do you need?” “Oh, Cliff, five, ten minutes, maybe two or three slides.” Now, ladies and gentlemen, I may not know much about eBay, but I’ve been speaking professionally for over 30 years of my life. If all you need from Cliff Eno is, you know, five, ten minutes and two or three slides, I can talk about subatomic particle physics. I can talk about whatever it is you do in five, ten minutes, and I’ll probably make it more fun than you would. Right? I have absolutely no fear of getting in front of an audience and talking about stuff.</p>
+
+    <p>So I said yes. So I said yes. I said, “You know what? I’m going to — I’m going to do this for you. Let me help you out.” “Cliff, you are an angel. You are my hero. Listen, I’m going to do good — good things will come of this, Cliff, I really —” Of course they were paying me for this gig too, so that was an important thing. So, “Listen, Cliff, my assistant — my assistant — you’re my hero, man, I owe you big time. My assistant is going to call you in a few minutes, because you have to work out all your travel plans. Please tell your family I’m sorry you’re going to have to fly down there tomorrow on a Sunday. But listen, the slides — we need the slides tonight, so, you know, because we got to get these things down to New Orleans for the presentation.” “No, no trouble, Reva. It’s — I’m on the East Coast here, so I got a three-hour thing here. Definitely by the time you leave the office today you’ll have these slides.” “Thanks, Cliff, you’re my hero.” “Cliff, what the heck did I just do?”</p>
+
+    <p>All right. Think — keep in mind I’m at my grill doing hamburgers during this whole conversation. All right. Don’t burn — don’t burn dinner. Let’s — okay. Think, think, Cliff. eBay. eBay. Selling online. Selling online. Sales tax. Sales tax. They probably don’t know that when you sell online and somebody in the same state buys, you have to charge sales tax. Okay, that’s one. Income tax. These people start out selling as hobbies and stuff. They don’t realize it gets out of hand. After a while they don’t know if they’re making money or not. They have to pay taxes on that. That’s a slide. Fraud. They probably don’t know that — how many times you bought something on eBay that didn’t look like it did in the photo? Right? You know, because that’s why — because eBay sellers kind of borrow each other’s photos sometimes, and it’s not exactly the same thing you’re buying. You know, that’s not a good thing. That’s fraud, right? So I can talk — I can scare the crap out of them with that. Seriously.</p>
+
+    <p>By the time I finished these hamburgers, I had 12 ideas. I had like 15 ideas for slides. Seriously. After dinner I went upstairs, I banged out the best slides I could think of, and that following Monday I was in a room in New Orleans like this one, talking to 5,000 people. When you get outside the Northeast, eBay is not really big in the Northeast, but when you get outside the Northeast — especially when you get into like rural America, the Heartland, and the Sun Belt — eBay is huge. They had 30,000 people attending this trade show, and 5,000 of them were in this room for the panel launching the new <em>eBay Entrepreneur</em> magazine.</p>
+
+    <p>And there I am on a panel with Marsha Collier, Michael Gerber, Bob Kiyosaki — the top names in entrepreneurship. This is a little — Cliff, you know, they’re talking about legal and tax stuff, right? But it — and there’s Reva in the front row going like this, you know. But it doesn’t stop there. In fact, right afterwards I got a regular gig as a columnist for eBay, by the way. That was one of my little rewards for doing that program. But it gets better.</p>
+
+    <p>When I got off the podium after doing this wonderful — handing cards to all the other speakers and stuff — I got off the podium and all of a sudden I’m surrounded by a bunch of people wearing light blue shirts and khaki pants, which I later found out was the eBay corporate uniform. That’s what the employees of eBay wear in San Jose at the corporate headquarters. “Cliff, you were fantastic. Listen, we are desperate for somebody like you.” And I said, “Really? You know, middle-aged, fat, balding small business attorney from Fairfield, Connecticut. I mean, really? Is it — I mean, I’ve heard things are bad in California, but is it really that bad?” And she goes, “No, no, no.”</p>
+
+    <p>And they started telling me about this thing called eBay University, which is basically a team of people who fly around the country teaching eBay sellers how to build real businesses out of their eBay selling. “And we need a guy to talk about legal and tax stuff, because people are asking us all these kinds of questions we don’t know how to answer them. You obviously do.” So I said, “All right, this is interesting. What’s — what’s involved? What’s the commitment?” “Well, it’s one weekend. It’s one Saturday a month. We have these programs every month. It’s in a different city. It’s on a Saturday. You fly out on Friday, you do your program on Saturday. It’s a 90-minute PowerPoint. We need — there’s four speakers, each one who does a 90-minute PowerPoint. We usually go out for a great dinner afterwards wherever we are. We always go to a top-notch restaurant, and then either Saturday night or Sunday morning you fly back home.” So it’s like one day — one day a month.</p>
+
+    <p>“Okay. And you obviously pay for this. You know, how much do you charge for this? How much do you pay for this? Your speakers —” “$10,000 plus expenses per speech.” I was being offered a $120,000 contract with eBay to do a 90-minute PowerPoint. Yep. “I can do that. I’m doing this.”</p>
+
+    <p>That next following morning I went out to the airport, I opened my laptop, I went to Amazon.com, and I bought every freaking book that had eBay in the title. I must have bought 45 books. I am not kidding you. My wife thought I was nuts. I had a seven-foot-high stack of books — everything that had ever been written on eBay. I immersed myself in it for the next two weeks. I put together the PowerPoint. I sent it out to their legal department — it had to be vetted by them — and then I started doing these eBay University things around the country for $10,000 a pop.</p>
+
+    <p>Fast forward a year. I’m doing this program at the Javits Center in New York at the Digital Life trade show, and during the Q&amp;A at the end of the program, I see this one very elegantly dressed woman hanging back. She’s clearly not an eBay seller. She’s got another agenda for being in that room. eBay sellers, by the way, you should all know, they all look like they come from farms. You know, when they — you always tell a group of eBay — they like they just came off the — out of the fields. It’s kind of like that. And this woman was very elegantly dressed. She probably was not part of that crowd. All my eBay friends listening to this tape are going to have a fit at my saying that, but that’s okay. They’re great people. No, I absolutely adore the eBay people. I absolutely do. They are absolutely — they’re some of the wildest, craziest, and most fun people I’ve ever known. I have to say that, and I really do mean that.</p>
+
+    <p>Somebody living on a farm in Kansas making $150,000 a year selling stuff on eBay — you know, that to me is a hero. I have to say, a hero — or a heroine. I love people who have done that kind of thing, having so little to work with. And the eBay people are phenomenal that way.</p>
+
+    <p>But seriously, so after the Q&amp;A, she comes over, this woman, and she says, “Cliff, my name is Jackie Flynn. I’m senior editor for AMACOM Books, the publishing arm for the American Management Association. You probably know — we do have a series of books that we have for people selling on eBay. We are desperate for someone to write a book on the legal and tax issues of selling. Are you interested?”</p>
+
+    <p>So the bottom line, ladies and gentlemen: you are looking right now at the world’s leading authority on the legal and tax issues not only of selling on eBay, but on selling at retail online. Amazon has expressed an interest in working with me. Google has expressed an interest in working with me now. I’m going to be in Europe part of the summer doing some talks over there. My clientele is about 30% e-commerce companies who have all heard about me because of the work that I’ve done for eBay. I’ve written five books on this topic, and I work on a sixth. And I cannot tell you how much money and how much fun I have had because on a hot summer day in August 2004, sitting in my backyard in a T-shirt and shorts grilling hamburgers for dinner, I took a cell phone call offering me a Frugal Framis, and I said yes, and I let it take me someplace really, really fantastic.</p>
+
+    <p>This is how success works in the real world. Get out there. Start pitching what you do. But don’t become a prisoner of your resume, or of your marketing brochure, or of your website. When someone throws you a Frugal Framis, it’s probably because that’s where the future is going. Say yes to the Frugal Framis and let it lead you someplace, because it might — it might lead you someplace really fantastic. And I hope you have as much fun as I have.</p>
+
+    <p>That is all I have to say, folks. That is how to sell just about anything to just about anybody. Thank you very much. You’ve been an absolutely marvelous and very patient audience. I have to be careful with video cameras going — I can’t do all the wild and crazy stuff that I sometimes do. So thank you for your patience.</p>
+  </section>
+
+  <!-- ================= Q&A ================= -->
+  <section id="qa">
+    <h2 class="section-title">Questions and Answers</h2>
+
+    <div class="qa">
+      <p class="question">If you have a product or service that has both a very good passion sell and a good fear sell, could you do both in the same pitch? Would that work against each other, or is that bad?</p>
+      <p class="answer">The question is: if you have a product or service that has both a passion sell and a fear sell, could you do both in the same presentation? The answer is absolutely yes, but if you really know your market, you won’t have to. You’ll know which one will work. I mean, you can certainly point out that there’s a passion side as well as a fear side, but you should really focus on what you know your customer is looking for. That’s really what I’m stressing you do here, because that’s what they’re going to tune into. The other side of the equation — they probably will not be that interested in. But they’re going to want to know — you need to know going in what that person is. You don’t want any surprises. That’s why it’s so hard to sell to somebody that you don’t really know.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">You said there are two reasons people don’t buy things they need — one is that they don’t know what they need. What was the second one?</p>
+      <p class="answer">The second one was: even though they know they need something, they don’t always buy it. That was my point about the will. Even though people know they need something, they don’t always buy it, because the fears and passions things are not happening with them.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">How do you use your three points to sell something on eBay — or maybe they don’t apply to selling online?</p>
+      <p class="answer">Good question. How do you apply these three points to selling online? The answer is that you do. It’s just that it’s not an in-person meeting. You still got to know who you’re selling to. If you’re selling on eBay, you want to know who your market is. Who are your customers? Who buys antique mechanical banks? I used to collect those, believe it or not. Who buys antique mechanical banks? Describe that person to me. What’s their demographics?</p>
+      <p class="answer">By the way, I’ll tell you: most people who buy antique mechanical banks have a net worth of over a million dollars. They tend to be 50 to 60 years old. They tend to be heavily male. A lot of former engineers, and a lot of them live in Europe. That I can tell you. So if you’re selling antique mechanical banks on eBay, I’ve just told you who you should be targeting. And make sure that when you do your eBay setup, your eBay settings and stuff like that, you’re targeting those specific people. Make sure you list, for example, on eBay Deutschland in Germany, because a lot of these collectors are German and Austrian. That’s an example of how you would use these techniques.</p>
+      <p class="answer">And then when you’re selling — this is obviously a passion sell. On eBay, most of the stuff that you’re selling there doesn’t really have a fear component. I’ll be honest with you: it’s mostly passion. It’s antiques, it’s collectibles. I don’t really see a big fear factor there, except in auction listings. If on eBay you’re selling something at auction, what’s the fear sell? Someone’s going to get this before I do. That’s why they ever do the — if you buy at auction, they always give you the auction, but they also have the Buy It Now price, which is like 30% over market value. That’s why they do that. The idea is that if you don’t want to bid at auction and you’re afraid that someone’s going to get to that before you, you click the Buy It Now option and pay 30% more than market value, but at least you know you’re getting it. If you’re willing to take a gamble — if you don’t care about it as much — you go through the auction format and risk it. You might be outbid by a sniper.</p>
+      <p class="answer">Has anybody here ever bid on eBay and you got sniped at the last five seconds of the auction by somebody? Does that ever happen to you? Let me tell you something: there’s sniper software that you can subscribe to where you can become that person. It automatically puts your bid in for five seconds before the auction closes, whenever it does. If those who want to hear more about that, I’ll be happy to talk about it after. No, it’s perfectly legal. It’s not at all sleazy or anything like that. You pay a little bit for the privilege. You pay for the right to bid up to certain amounts using this software. The leading outfit is an outfit called eSnipe.com, if you want to write that down. Say it again: eSnipe — eSnipe.com. That’s the leading — there’s several companies, but that’s the leading one that offers this sniper software. I use it myself. When you’re bidding on something really hot on eBay, the only way to make sure you’re going to get it is to use one of the sniper programs. I have to say that.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">We’re selling in our business to buyers — to other businesses, not the end user. Would you modify your approach for B2B selling? And why do you still do these talks if you’ve obviously been successful?</p>
+      <p class="answer">Okay, fair enough. First of all, let me answer the first question first: why am I doing this, since I’ve obviously been successful? Why is Jerry Seinfeld, who’s worth three-quarters of a billion dollars, still doing standup comedy in New York City comedy clubs? He likes to do it. Same thing — you love to do it. But also, too, this helps me learn what’s going on in the marketplace. The questions that you’re asking me help me determine: am I still on target here? Is this joke still working? Does this one need to be changed? Is this one offending people? It’s our market research. It’s only a 20-minute drive from my home too, so it’s real cheap. That’s why I do it. Those are two reasons why I do it. And also, too, I love working with the entrepreneur community. I really do. I love meeting new people who are doing this sort of stuff.</p>
+      <p class="answer">The second question is: would you modify it at all if you’re in B2B selling? That’s really what you’re asking — you’re selling mostly to corporations, to large businesses. Would the strategy be any different? The answer is: a little bit, but not very much. Corporations do not buy anything. People in corporations buy things, and the decision makers have fears and passions just like anybody else does. You got to figure out what they are.</p>
+      <p class="answer">What is the biggest fear a corporate executive has? Not at all — I disagree with that. He’s got a bigger fear than that. What is it? No — being fired. Being fired, maybe because he bought something that wasn’t appropriate. But that’s not the right answer. The right answer is: being fired. When you walk into that office as a consultant, you got the word “fear” stamped on your forehead. You’re some crazy guy off the street who’s been out of work for six to nine months, whatever, and you’re terrifying that poor person. That person’s worried about losing his job because he hires you and you screw up. So you got to do whatever you can do to alleviate that fear. As I’m talking about consulting, obviously, but the same rules apply when you’re selling services.</p>
+      <p class="answer">So for example, I used to sell — I actually wrote a book years ago called <em>The Legal Job Interview: How to Get the Law-Related Job in Any Market</em>. When I was selling to bookstore chains, here was my sales pitch. I’m talking to a buyer now, a corporate buyer. I would say, “Look, every — you sell to a lot of university bookstores. Every one of those universities has a law school. Every one of those law schools has law students, and those law students are terrified that they’re not going to get jobs. They’re terrified that they’re not going to get interviews, that they’re not going to be able to know how to handle them when they deal with them. If you’re selling to those kinds of customers,” what you tell your university bookstore buyers is, “if you put a stack of these books right by the cash register where the students will see them on their way out as they’re buying other stuff — as they’re buying their textbooks for the semester — these books will sell out within 24 hours.” That’s the sales pitch. It’s a greed passion sell. Exactly right.</p>
+      <p class="answer">When you’re selling to middlemen, the sale is almost always a greed passion sell, because they’re not buying these for their own use. They’re buying them for resale. Their biggest fear is that these things are going to sit around in inventory forever. So you got to alleviate that fear. You got to convince them that the sell-through rate is going to be very high. That’s how you sell to a middleman.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">When you sell advertising, what would be the basis?</p>
+      <p class="answer">When you sell advertising, it depends on who you’re talking to. I will tell you: one of my clients specializes in selling advertising to law journals — to legal, specialized legal publications for the legal community. And obviously I help him target. He’s got a double problem, because not only is he selling to a lawyer, he’s selling to a publisher who’s very worried about going under, going out of business in the next few years — which, because let’s face it, technology is changing everything. I’m right now helping him develop an internet advertising strategy, because that’s where these journals are going. They’re becoming online publications, and he’s terrified that he’s not going to be able to make the same margin selling internet advertising that he will with print advertising. So there’s an example. I’m helping him make that transition to becoming an internet advertising expert, because that’s where his marketplace is going.</p>
+    </div>
+  </section>
+
+  <!-- ================= FUTURE ================= -->
+  <section id="future">
+    <h2 class="section-title">Four Words About the Future</h2>
+
+    <p>You want to predict the future? I’ll close on this. I’m going to give you four words. Seriously, you want to write these down — if you want to know where the future is going, I got four words that can help you get there. So seriously, I can do it in four words. It’ll only take five minutes — well, maybe four minutes. I’ll try to do it in four; Dee’s got to go home. Okay.</p>
+
+    <p>These are four things that I think we can all be fairly certain about the next 10, 20, 30 years, at least in America or North America.</p>
+
+    <h3>1. Digital</h3>
+    <p>The future is digital. Digital is the word. Brick and mortar is going out the window. You’re not going to see mom-and-pop retail stores on any commercial strip in five or ten years. Right off the — right now you’re not seeing those around here. It’s all going online. That Digital Life trade show that I was talking about is all about companies that are helping people bring their businesses from the real world into the digital world, and it’s phenomenal. Last year they had 500 exhibitors. Think this is a small thing — the world is going digital. Get on that bus. Don’t do brick and mortar when everything’s going digital. That’s number one.</p>
+
+    <h3>2. Global</h3>
+    <p>Number two: the future is going global. The national and state boundaries mean absolutely nothing anymore. Three weeks ago I bought something on eBay from a seller in Russia. As a boy growing up in the 1960s, during the height of the Cold War, if I had ever bought anything from a — in Russia, do you know what would have happened? I would have had the FBI in my living room the next day. You know, that’s how bad things were. Things are different now. Nobody thinks anything of buying from somebody in Kazakhstan. I actually have a client that is importing things from Kazakhstan. Remember Borat? He’s importing things from Borat’s country, and he’s doing very, very well with that. They actually have some wonderful wine in Kazakhstan. It’s interesting enough — you don’t think of Central Asia as being a wine-growing region, but it is. There’s some wonderful wines from Central Asia. He’s specializing in that.</p>
+
+    <h3>3. Virtual</h3>
+    <p>So the future is global, the future is digital, the future is virtual. This is different than being digital. Virtual means you’re not going to see fixed hierarchy corporations anymore, where you climb corporate ladders. What you’re going to see is more like free-flowing project teams. Think of — can you think of a lava lamp? Can you visualize a lava lamp in your head? It’s the best — it’s the best metaphor that I could think of. Think of a lava lamp. Right. Remember the globs of the fluids? They kind of go into each other and then they morph and they go different directions. That’s what we’re going to be seeing in the world of employment going forward.</p>
+    <p>We’re not going to be seeing fixed corporate pyramid hierarchies. What we’re going to be seeing is project teams that get together and work on a project, then one group kind of morphs over here and does that, and another one goes over here and does that, and this guy goes over there and joins up with a different group. It’s going to be like a lava lamp. That’s what the world of work is going to look like. We’re all going to be independent contractors in 30 years. I really do believe that. There will be companies, but they’re only going to have five or ten employees or anything like that. We’re going to see a real flattening of corporate hierarchies.</p>
+
+    <h3>4. 24/7</h3>
+    <p>So: global, digital, virtual. And then last but not least, the world is 24/7. The idea that you will have work days and play days is going to go out the window. Every day will be a work day. Every day will be a play day. Every day will be a study day. I work every Sunday for at least a couple of hours. On Wednesday afternoons I play for a couple of hours. That’s the world that you’re going to be heading toward. There’s going to be no such thing as Monday through Friday and then weekends, Saturday, Sunday. It’s all going to be 24/7. But that, I think, makes it a lot more exciting and a lot more fun to be — I don’t think that these are necessarily bad things. I think the world’s going to be a little bit more scary, but I think it’s going to be a lot more fun too.</p>
+
+    <p>And by the way, fear and exhilaration — neuropsychologists, guys who deal with brain cells, brain waves, and stuff like that, tell us that fear and exhilaration generate the exact same responses in your brain. When you’re really excited about something, when you’re really terrified, it sets off the same lights in the brain. You ever see those brain scan studies that they do? Fear and exhilaration are just two sides of the very same coin. Welcome to the 21st century and the year 2013. Thanks again, guys. You’ve been a great crowd.</p>
+  </section>
+
+  <footer class="colophon">
+    <p><strong>How to Sell Anything to Anyone</strong> — a SCORE workshop presented by Cliff Eno, with an introduction by Dina Maon. Transcript edited for readability; timestamps removed. Content reflects the speaker’s remarks as delivered.</p>
+    <p>SCORE is a free-of-charge service offering workshops and one-on-one mentoring to small businesses and aspiring entrepreneurs.</p>
+  </footer>
+
+</div>
+</body>
+</html>
+```
